@@ -18,7 +18,8 @@ body {
     padding: 20px;
     text-align: center;
     color: white;
-    background: linear-gradient(90deg, 
+    background: linear-gradient(90deg,
+        #00FF00,
         #0000FF,
         #4B0082
     );
