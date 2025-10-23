@@ -1,0 +1,199 @@
+/* --- CONFIGURAÇÕES GERAIS E PALETA DE CORES --- */
+:root {
+    --cor-fundo: #fdfaf4;       /* Papel envelhecido (Marfim) */
+    --cor-texto: #333333;      /* Cinza-escuro (Tinta) */
+    --cor-titulo: #004080;     /* Azul-profundo (Melancolia) */
+    --cor-detalhe: #8B4513;     /* Sépia (Paixão contida) */
+    --cor-bloco: #f5f2eb;      /* Fundo de bloco mais suave */
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cor-titulo);
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--cor-detalhe);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+a {
+    color: var(--cor-detalhe);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cor-titulo);
+    text-decoration: underline;
+}
+
+/* --- HERO (SEÇÃO INICIAL) --- */
+.hero {
+    background-color: var(--cor-titulo); /* Fundo azul escuro */
+    /* Sugestão: Adicionar uma imagem de fundo sutil, como uma textura de papel ou manuscrito */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sua-imagem.jpg'); */
+    background-size: cover;
+    color: var(--cor-fundo); /* Texto claro sobre fundo escuro */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero .subtitle {
+    font-family: 'Lora', italic;
+    font-size: 1.3rem;
+    color: #cccccc; /* Um cinza claro para a citação */
+    margin-top: 10px;
+}
+
+/* --- BARRA DE NAVEGAÇÃO --- */
+.navbar {
+    background-color: var(--cor-texto);
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: var(--cor-fundo);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--cor-detalhe);
+    text-decoration: none;
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+section {
+    padding: 30px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* --- Perfil dos Correspondentes --- */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile {
+    flex-basis: 48%;
+    background-color: var(--cor-bloco);
+    padding: 20px;
+    border-left: 4px solid var(--cor-titulo);
+}
+
+/* --- Cartões de Temas (Para o tema da homossexualidade) --- */
+.theme-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.theme-card h3 {
+    margin-top: 0;
+    color: var(--cor-detalhe); /* Destaque especial para o tema */
+}
+
+/* --- Citações / Fragmentos --- */
+blockquote {
+    background-color: var(--cor-bloco);
+    border-left: 5px solid var(--cor-detalhe);
+    margin: 20px 0;
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+}
+
+blockquote p {
+    margin-bottom: 0.5em;
+}
+
+blockquote span {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--cor-texto);
+    color: #aaa;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Simples) --- */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+  }
