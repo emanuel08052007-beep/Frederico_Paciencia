@@ -1,19 +1,274 @@
-<!-- FILE: css/style.css -->/* Paleta pensada para equilibrar nostalgia modernista e sutis referências à cultura queer: azuis profundos, bege antigo e acentos em arco-íris sutis. */
+/* Configurações Gerais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-:root{ --bg: #f6f7f9; --card: #ffffff; --accent: #2b3a67; --muted: #6b6b6b; --accent-soft: linear-gradient(90deg, rgba(255,120,120,0.08), rgba(120,180,255,0.08)); }
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
-*{box-sizing:border-box} body{ font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin:0; background:var(--bg); color:#222; } .site-header{ display:flex; align-items:center; justify-content:space-between; padding:18px 30px; border-bottom:4px solid rgba(43,58,103,0.06); background:var(--card); } .brand h1{margin:0; font-size:1.6rem; color:var(--accent)} .subtitle{margin:2px 0 0; font-size:0.9rem; color:var(--muted)} .main-nav a{margin-left:14px; text-decoration:none; color:var(--accent); font-weight:600}
+/* --- Tema Arco-Íris e Cabeçalho --- */
+.rainbow-bar {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    /* O gradiente do arco-íris! */
+    background: linear-gradient(90deg, 
+        #FF0000, /* Vermelho */
+        #FF7F00, /* Laranja */
+        #FFFF00, /* Amarelo */
+        #00FF00, /* Verde */
+        #0000FF, /* Azul */
+        #4B0082, /* Índigo */
+        #8B00FF  /* Violeta */
+    );
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
 
-.hero{padding:36px 30px; background:var(--accent-soft); border-bottom:1px solid rgba(43,58,103,0.04)} .hero-inner h2{margin:0 0 12px; font-size:1.4rem} .hero-inner p{margin:0; color:var(--muted)}
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
 
-main{max-width:980px; margin:28px auto; padding:0 18px} .card{background:var(--card); padding:18px; margin-bottom:18px; border-radius:12px; box-shadow:0 6px 18px rgba(30,30,30,0.04)} .card h3{margin-top:0; color:var(--accent)} .nota{font-size:0.9rem; color:var(--muted)}
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    font-style: italic;
+}
 
-.author-row{display:flex; gap:18px; align-items:center} .author-photo{width:150px; height:150px; object-fit:cover; border-radius:8px; border:1px solid rgba(0,0,0,0.06)} .fonte{font-size:0.85rem; color:var(--muted)}
+/* Navegação */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+}
 
-.images-grid{display:flex; gap:12px; flex-wrap:wrap} .images-grid img{width:calc(50% - 6px); border-radius:8px; display:block} figcaption{font-size:0.85rem; color:var(--muted); margin-top:6px}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Reduzi um pouco o padding para caber mais links */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-.site-footer{padding:18px; text-align:center; color:var(--muted); font-size:0.9rem}
+nav a:hover {
+    background-color: #fff;
+    color: #FF007F; /* Cor vibrante (Pink) para o hover */
+}
 
-/* Pequenas decorações que aludem a identidade queer sem gritar: faixa sutil no header */ .site-header::after{ content:""; display:block; height:4px; width:100%; background:linear-gradient(90deg, rgba(255,82,82,0.2), rgba(255,200,70,0.12), rgba(80,200,150,0.12), rgba(90,130,255,0.12)); margin-top:8px; border-radius:4px }
+/* Seções de Conteúdo */
+section {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
 
-@media(max-width:700px){ .author-row{flex-direction:column; align-items:flex-start} .images-grid img{width:100%} .main-nav{display:none} }
+section h2 {
+    color: #4B0082; /* Violeta escuro */
+    border-bottom: 3px solid #FF7F00; /* Laranja */
+    padding-bottom: 10px;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* --- Seção de Temas --- */
+.theme-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.theme-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 3px solid #00FF00; /* Verde vibrante */
+}
+
+.theme-box div {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* --- Seção dos Autores --- */
+.author-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.author-box {
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Foto redonda */
+    border: 5px solid #0000FF; /* Azul */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.author-photo.bandeira {
+    border-color: #FF007F; /* Cor diferente para Bandeira */
+}
+
+/* --- Seção de Trechos (Citações) --- */
+.quote-card {
+    border-left: 7px solid #8B00FF; /* Violeta */
+    background-color: #f9f6ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.quote-card p {
+    margin: 0;
+}
+
+.quote-card footer {
+    font-style: normal;
+    text-align: right;
+    font-weight: bold;
+    color: #4B0082;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+
+/* --- Botões Dinâmicos --- */
+.dynamic-btn {
+    background-color: #FF007F; /* Pink vibrante */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dynamic-btn:hover {
+    background-color: #c90066;
+    transform: scale(1.05);
+}
+
+.hidden-info {
+    display: none; /* Começa escondido */
+    padding: 15px;
+    background-color: #faf3ff; /* Fundo lavanda claro */
+    border-left: 5px solid #8B00FF; /* Violeta */
+    margin-top: 15px;
+    border-radius: 0 8px 8px 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Seção Galeria --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não saia da borda */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item p {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #555;
+    background-color: #fdfdfd;
+    margin: 0;
+}
+
+/* --- Seção Recursos --- */
+#recursos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#recursos li {
+    margin-bottom: 10px;
+}
+
+#recursos li a {
+    text-decoration: none;
+    color: #FF007F;
+    font-weight: bold;
+    background-color: #fdf0f7;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+#recursos li a:hover {
+    background-color: #FF007F;
+    color: white;
+    padding-left: 20px;
+}
+
+/* Rodapé */
+footer {
+    padding: 15px; /* Um pouco mais fino que o header */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
