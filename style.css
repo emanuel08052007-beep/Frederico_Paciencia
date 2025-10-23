@@ -14,7 +14,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- Tema Arco-Íris e Cabeçalho --- */
 .blue-bar {
     padding: 20px;
     text-align: center;
@@ -22,6 +21,24 @@ body {
     background: linear-gradient(90deg, 
         #0000FF,
         #4B0082
+    );
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Tema Arco-Íris e Cabeçalho --- */
+.rainbow-bar {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    /* O gradiente do arco-íris! */
+    background: linear-gradient(90deg, 
+        #FF0000, /* Vermelho */
+        #FF7F00, /* Laranja */
+        #FFFF00, /* Amarelo */
+        #00FF00, /* Verde */
+        #0000FF, /* Azul */
+        #4B0082, /* Índigo */
+        #8B00FF  /* Violeta */
     );
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
