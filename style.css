@@ -1,0 +1,19 @@
+<!-- FILE: css/style.css -->/* Paleta pensada para equilibrar nostalgia modernista e sutis referências à cultura queer: azuis profundos, bege antigo e acentos em arco-íris sutis. */
+
+:root{ --bg: #f6f7f9; --card: #ffffff; --accent: #2b3a67; --muted: #6b6b6b; --accent-soft: linear-gradient(90deg, rgba(255,120,120,0.08), rgba(120,180,255,0.08)); }
+
+*{box-sizing:border-box} body{ font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin:0; background:var(--bg); color:#222; } .site-header{ display:flex; align-items:center; justify-content:space-between; padding:18px 30px; border-bottom:4px solid rgba(43,58,103,0.06); background:var(--card); } .brand h1{margin:0; font-size:1.6rem; color:var(--accent)} .subtitle{margin:2px 0 0; font-size:0.9rem; color:var(--muted)} .main-nav a{margin-left:14px; text-decoration:none; color:var(--accent); font-weight:600}
+
+.hero{padding:36px 30px; background:var(--accent-soft); border-bottom:1px solid rgba(43,58,103,0.04)} .hero-inner h2{margin:0 0 12px; font-size:1.4rem} .hero-inner p{margin:0; color:var(--muted)}
+
+main{max-width:980px; margin:28px auto; padding:0 18px} .card{background:var(--card); padding:18px; margin-bottom:18px; border-radius:12px; box-shadow:0 6px 18px rgba(30,30,30,0.04)} .card h3{margin-top:0; color:var(--accent)} .nota{font-size:0.9rem; color:var(--muted)}
+
+.author-row{display:flex; gap:18px; align-items:center} .author-photo{width:150px; height:150px; object-fit:cover; border-radius:8px; border:1px solid rgba(0,0,0,0.06)} .fonte{font-size:0.85rem; color:var(--muted)}
+
+.images-grid{display:flex; gap:12px; flex-wrap:wrap} .images-grid img{width:calc(50% - 6px); border-radius:8px; display:block} figcaption{font-size:0.85rem; color:var(--muted); margin-top:6px}
+
+.site-footer{padding:18px; text-align:center; color:var(--muted); font-size:0.9rem}
+
+/* Pequenas decorações que aludem a identidade queer sem gritar: faixa sutil no header */ .site-header::after{ content:""; display:block; height:4px; width:100%; background:linear-gradient(90deg, rgba(255,82,82,0.2), rgba(255,200,70,0.12), rgba(80,200,150,0.12), rgba(90,130,255,0.12)); margin-top:8px; border-radius:4px }
+
+@media(max-width:700px){ .author-row{flex-direction:column; align-items:flex-start} .images-grid img{width:100%} .main-nav{display:none} }
