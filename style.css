@@ -19,15 +19,9 @@ body {
     padding: 20px;
     text-align: center;
     color: white;
-    /* O gradiente do arco-íris! */
     background: linear-gradient(90deg, 
-         /* Vermelho */
-         /* Laranja */
-         /* Amarelo */
-         /* Verde */
-        #0000FF, /* Azul */
-        #4B0082 /* Índigo */
-          /* Violeta */
+        #0000FF,
+        #4B0082
     );
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
